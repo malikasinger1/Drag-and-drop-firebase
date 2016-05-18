@@ -1,14 +1,20 @@
 <br/>  <br/>
+{{obj | json}}
+
+
 
 <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
     <md-input-container>
-        <label>Name</label>
-        <input ng-model="user.name">
+        <input ng-model="user.detail" >
+    </md-input-container>
+
+
+
         <md-button class="md-raised md-primary" ng-click="addFemale(user)">add</md-button>
         <md-button class="md-raised md-primary" ng-click="addMale(user)">doing</md-button>
         <md-button class="md-raised md-primary">review</md-button>
         <md-button class="md-raised md-primary">done</md-button>
-    </md-input-container>
+
 </md-content>
 
 <div layout="row">
@@ -22,9 +28,12 @@
             </md-toolbar>
             <md-card>
                 <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction()" ui-draggable="true"
-                              drag="ad" on-drop-success="dropSuccessHandler($event,$index,add)"
-                              ng-repeat="ad in add track by $index">
-                    {{ad.name}}
+                              drag="ad"
+                              ui-on-drop="onDrop($event,$index,data)"
+                              on-drop-success="dropSuccessHandler($event,$index,data)"
+
+                              ng-repeat="ad in data ">
+                    {{ad.detail}}
                 </md-list-item>
             </md-card>
         </md-card>
