@@ -1,0 +1,21 @@
+body {
+    margin: 90%;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: red;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.listdemoBasicUsage md-divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* CSS FOR ADMIN LOGIN FORM*/
+.loginBox {
+    max-width: 90%;
+    width: 500px
+}
